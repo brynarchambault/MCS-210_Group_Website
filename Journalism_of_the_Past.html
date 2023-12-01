@@ -13,7 +13,7 @@
         </style>
     </head>
 
-    <div class = "tab">  <!-- I still need to figure out how to link these tabs to another part of the 
+    <div class = "tab1">  <!-- I still need to figure out how to link these tabs to another part of the 
     website. Right now, you can hover and click on them, but they don't do anything-->
         <a href="HomePage1.html"> <button class = "tablinks" onclick = "openTab(event, 'Home Page')">Home</button> </a>
         <a href="Journalism_of_the_Past.html"> <button class = "tablinks" onclick = "openTab(event, 'Journalism of the Past')">Journalism of the Past</button> </a>
@@ -25,9 +25,17 @@
 
     <h1>Journalism of the Past</h1>
 
+    <div class= "tab2">
+        <p>On this page:</p>
+        <a href="#Journalism"> <button class = "pagelinks">Journalism before Social Media</button> </a>
+        <a href ="#Holodomor"> <button class = "pagelinks">The Holodomor</button> </a>
+        <a href="#Nakba"> <button class = "pagelinks">The Nakba</button> </a>
+    </div>
+
     <table>
         <tr>
             <td class="column">
+                <a name="Journalism"></a> <!-- This is the anchor for the link to the Journalism before Social Media section -->
                 <h2><u>Journalism before Social Media</u></h2>
                 <p> blah blah blah. </p>
             </td>
@@ -37,6 +45,7 @@
         </tr>
         <tr>
             <td class="column">
+                <a name="Holodomor"></a> <!-- This is the anchor for the link to the Holodomor section -->
                 <img src="SocialMedia.webp" alt="Social Media" style="width:100%">
             </td>
             <td class="column">
@@ -46,6 +55,7 @@
         </tr>
         <tr>   
             <td class="column">
+                <a name="Nakba"></a> <!-- This is the anchor for the link to the Nakba section -->
                 <h2><u>The Nakba</u></h2>
                 <p> blah blah blah. </p>
             </td>
@@ -67,7 +77,7 @@
             text-align: center;
             letter-spacing: -1px;
         }
-        .tab {  /* Style the tab*/
+        .tab1 {  /* Style the tab*/
             padding-top: 20px;
             display: flex;
             justify-content: center;
@@ -76,7 +86,7 @@
             background-color: #f5f5f5;
         }
         /* Style the buttons inside the tab*/
-        .tab button {
+        .tab1 button {
             background-color: inherit;
             float: left;
             border: none;
@@ -87,15 +97,51 @@
             font-size: 17px;
         }
         /* Change background color of buttons on hover*/
-        .tab button:hover {
+        .tab1 button:hover {
             text-decoration: underline;
         }
         /* Create an active/current tablink class*/
-        .tab button.active {
+        .tab1 button.active {
             background-color: #ccc;
         }
         /* Style the tab content*/ 
-        .tabcontent {
+        .tab1 content {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .tab2 {  /* Style the tab*/
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #f5f5f5;
+            background-color: #f5f5f5;
+        }
+        .tab2 p {
+            font-size: 12px;
+        }
+        /* Style the buttons inside the tab*/
+        .tab2 button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+        /* Change background color of buttons on hover*/
+        .tab2 button:hover {
+            text-decoration: underline;
+        }
+        /* Create an active/current tablink class*/
+        .tab2 button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content*/ 
+        .tab2 content {
             display: none;
             padding: 6px 12px;
             border: 1px solid #ccc;
