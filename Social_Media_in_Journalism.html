@@ -13,7 +13,7 @@
         </style>
     </head>
 
-    <div class = "tab">  <!-- I still need to figure out how to link these tabs to another part of the 
+    <div class = "tab1">  <!-- I still need to figure out how to link these tabs to another part of the 
     website. Right now, you can hover and click on them, but they don't do anything-->
         <a href="HomePage1.html"> <button class = "tablinks" onclick = "openTab(event, 'Home Page')">Home</button> </a>
         <a href="Journalism_of_the_Past.html"> <button class = "tablinks" onclick = "openTab(event, 'Journalism of the Past')">Journalism of the Past</button> </a>
@@ -27,9 +27,17 @@
 
     <h1>Social Media in Journalism</h1>
 
+    <div class= "tab2">
+        <p>On this page:</p>
+        <a href="#History"> <button class = "pagelinks">History of Social Media</button> </a>
+        <a href ="#Russia & Ukraine War"> <button class = "pagelinks">Russia & Ukraine War</button> </a>
+        <a href="#Israel Palestine Conflict"> <button class = "pagelinks">Israel Palestine Conflict</button> </a>
+    </div>
+
     <table>
         <tr>
             <td class="column">
+                <a name="History"></a> <!-- This is the anchor for the link to the History of Social Media section -->
                 <h2><u>History of Social Media</u></h2>
                 <p> The history of social media starts with the emergence of the internet and personal computers in the 1970-80s, followed by blogging and online bulletin boards in the 90s.
                     The first social media platform, Six Degrees, was created in 1997. Friendster and LinkedIn were released in 2002 with different features.
@@ -42,7 +50,10 @@
         </tr>
         <tr>
             <td class="column">
+                <a name="Russia & Ukraine War"></a> <!-- This is the anchor for the link to the Russia & Ukraine War section -->
+brynarchambault-Social-Media-in-Journalism-Ukraine-War-Section
                 <img src="Ukraine_Russia_War.jpg" alt="Photo courtesy of MIT Management Sloan School" style="width:100%">
+main
             </td>
             <td class="column">
                 <h2><u>Russia & Ukraine War</u></h2>
@@ -73,6 +84,7 @@
         </tr>
         <tr>   
             <td class="column">
+                <a name="Israel Palestine Conflict"></a> <!-- This is the anchor for the link to the Israel Palestine section -->
                 <h2><u>Israel Palestine Conflict</u></h2>
                 <p> blah blah blah. </p>
             </td>
@@ -94,7 +106,7 @@
             text-align: center;
             letter-spacing: -1px;
         }
-        .tab {  /* Style the tab*/
+        .tab1 {  /* Style the tab*/
             padding-top: 20px;
             display: flex;
             justify-content: center;
@@ -103,7 +115,7 @@
             background-color: #f5f5f5;
         }
         /* Style the buttons inside the tab*/
-        .tab button {
+        .tab1 button {
             background-color: inherit;
             float: left;
             border: none;
@@ -114,15 +126,51 @@
             font-size: 17px;
         }
         /* Change background color of buttons on hover*/
-        .tab button:hover {
+        .tab1 button:hover {
             text-decoration: underline;
         }
         /* Create an active/current tablink class*/
-        .tab button.active {
+        .tab1 button.active {
             background-color: #ccc;
         }
         /* Style the tab content*/ 
-        .tabcontent {
+        .tab1 content {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .tab2 {  /* Style the tab*/
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #f5f5f5;
+            background-color: #f5f5f5;
+        }
+        .tab2 p {
+            font-size: 12px;
+        }
+        /* Style the buttons inside the tab*/
+        .tab2 button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 12px;
+        }
+        /* Change background color of buttons on hover*/
+        .tab2 button:hover {
+            text-decoration: underline;
+        }
+        /* Create an active/current tablink class*/
+        .tab2 button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content*/ 
+        .tab2 content {
             display: none;
             padding: 6px 12px;
             border: 1px solid #ccc;
